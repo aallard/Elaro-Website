@@ -1,0 +1,58 @@
+{
+	"name": "elaro",
+	"version": "1.1.0",
+	"description": "Technology moves fast—and artificial intelligence (AI) is advancing even faster. Whether you run an AI agency, tech startup, chatbot platform, data science firm, digital agency, IT consulting company, robotics or machine learning business, you need a website that keeps up.",
+	"main": "index.js",
+	"scripts": {
+		"dev": "gulp dev",
+		"build": "gulp build",
+		"gulp": "gulp"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.27.7",
+		"clean-css": "^5.3.2",
+		"del": "4.1.1",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-beautify-code": "^2.0.4",
+		"gulp-cached": "^1.1.1",
+		"gulp-clean": "^0.4.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-dart-sass": "^1.1.0",
+		"gulp-file-include": "^2.3.0",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-notify": "^4.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^9.0.1",
+		"gulp-purgecss": "^7.0.2",
+		"gulp-replace": "^1.1.4",
+		"gulp-sass": "^6.0.1",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-uglify": "^3.0.2",
+		"gulp-webp": "^5.1.0",
+		"imagemin-mozjpeg": "^10.0.0",
+		"imagemin-optipng": "^8.0.0",
+		"imagemin-webp": "^8.0.0",
+		"sass": "^1.94.0"
+	},
+	"browserslist": [
+		"> 2%",
+		"ie >= 8",
+		"edge >= 15",
+		"ie_mob >= 10",
+		"ff >= 45",
+		"chrome >= 45",
+		"safari >= 7",
+		"opera >= 23",
+		"ios >= 7",
+		"android >= 4",
+		"bb >= 10"
+	],
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^7.1.0"
+	}
+}

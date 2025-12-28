@@ -1,0 +1,111 @@
+@use "../global" as *;
+
+
+.sec-title{
+  position: relative;
+  margin-bottom: 45px;
+  overflow: hidden;
+  .sub-title{
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-content-black2);
+    margin-bottom: 5px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 8px;
+    &::before{
+      content: '[';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::after{
+      content: ']';
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    @include xl{
+      margin-bottom: 15px;
+    }
+  }
+  .title{
+    font-size: 55px;
+    line-height: 60px;
+    font-weight: 400;
+    margin-bottom: 0;
+    letter-spacing: -0.05em;
+    display: block;
+    @include ml{
+      font-size: 45px;
+      line-height: 50px;
+    }
+    @include md{
+      font-size: 50px;
+      line-height: 55px;
+    }
+    @include sm{
+      font-size: 35px;
+      line-height: 40px;
+    }
+    @include xs{
+        font-size: 32px;
+        line-height: 1.10em;
+    }
+  }
+  p{
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 16px;
+    color: var(--color-content-black2);
+    margin: 30px 0 0;
+    letter-spacing: 0;
+  }
+}
+.sec-btn-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: -10px;
+    @include md{
+      display: block;
+      top: 0;
+    }
+    p{
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: var(--color-content-black2);
+        margin-right: 46px;
+        @include ml{
+          max-width: 279px;
+        }
+        @include md{
+          margin: 20px 0;
+          max-width: 100%;
+        }
+    }
+}
+
+
+// white-section-title
+.sec-title.white{
+  .sub-title,
+  .title,
+  p,
+  a{
+    color: var(--color-content-white);
+  }
+}
+
+.title.animated-heading .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+.title.animated-heading .letter {
+  display: inline-block;
+}

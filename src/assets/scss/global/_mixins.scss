@@ -1,0 +1,108 @@
+@mixin clearfix() {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+// Container Right expand
+@mixin ml-container-width($container_width) {
+    max-width: calc($container_width + calc(calc((100% - $container_width))/2));
+}
+
+
+
+// ================================
+// 📌 Breakpoint Variables
+// ================================
+
+$hd: 1920px;  // High resolution / large desktops
+$xl: 1440px;  // Extra large devices / laptops
+$lg: 1366px;  // Large devices / standard laptops
+$ml: 1201px;  // Medium large devices / small laptops
+$md: 1025px;  // Medium devices / tablets landscape
+$smd: 820px;  // Medium devices / tablets landscape
+$sm: 769px;   // Small devices / tablets portrait
+$xs: 577px;   // Extra small devices / mobiles
+$vxs: 480px;  // Very small devices / small phones
+$ms: 390px;   // Mini small devices / small phones
+
+@mixin hd {
+  @media (max-width: #{$hd}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin ml {
+  @media (max-width: #{$ml}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$md}) {
+    @content;
+  }
+}
+@mixin smd {
+  @media (max-width: #{$smd}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: #{$xs}) {
+    @content;
+  }
+}
+
+@mixin vxs {
+  @media (max-width: #{$vxs}) {
+    @content;
+  }
+}
+
+@mixin ms {
+  @media (max-width: #{$ms}) {
+    @content;
+  }
+}
+
+

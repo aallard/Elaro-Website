@@ -1,0 +1,501 @@
+@use "../global" as *;
+
+// faq-sec
+.faq-sec{
+    position: relative;
+    background-color: #F0F2F4;
+    border-radius: 25px;
+    margin: 14px 20px;
+    overflow: hidden;
+    .sec-title{
+        max-width: 524px;
+        @include ml{
+            max-width: 550px;
+        }
+    }
+}
+.faq-img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    @include xl{
+        left: -14%;
+    }
+    @include lg{
+        left: -13%;
+        width: 551px;
+    }
+    @include ml{
+        left: -11%;
+        width: 481px;
+    }
+    @include md{
+        width: 411px;
+    }
+    @include smd{
+        position: static;
+        transform: unset;
+        width: 600px;
+        margin-bottom: 50px;
+    }
+    @include xs{
+        width: 100%;
+    }
+}
+.faq-content{
+    position: relative;
+    .accordion-item{
+        border-bottom: 1px solid var(--color-content-black2);
+        padding-bottom: 36px;
+        margin-bottom: 35px;
+    }
+    .accordion-button:focus{
+        box-shadow: none;
+    }
+    .accordion-button{
+        background-color: unset;
+        padding: 0;
+        border: 0;
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 400;
+        color: var(--color-heading);
+        text-align: left;
+        letter-spacing: -0.03em;
+        @include sm{
+            font-size: 26px;
+            line-height: 36px;
+        }
+        @include xs{
+            font-size: 23px;
+            line-height: 32px;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 0;
+            width: 16px;
+            height: 9px;
+            background-image: url(../images/icon/angel.svg);
+            transition: all 0.3s ease;
+            transform: rotate(-3deg);
+        }
+    }
+    .accordion-body{
+        border: 0;
+        padding: 0;
+        box-shadow: unset;
+        font-weight: 500;
+        line-height: 30px;
+        font-size: 16px;
+        color: var(--color-content-black2);
+        margin-top: 22px;
+    }
+    .accordion-collapse{
+        border: 0;
+    }
+    .accordion-button:not(.collapsed){
+        color: inherit;
+        outline: none;
+         &::after{
+            transform: rotate(-86deg);
+        }
+    }
+}
+.accordion{
+    margin-bottom: 42px;
+}
+
+// faq-sec2{
+.faq-sec2{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 842px;
+        height: 1394px;
+        background-image: url(../images/layers/layer2-1.png);
+        @include xl{
+            top: 44%;
+            width: 771px;
+            height: 1308px;
+        }
+        @include smd{
+            top: 22%;
+        }
+        @include xs{
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            transform: unset;
+        }
+    }
+    .sec-title{
+        max-width: 517px;
+    }
+    @include lg{
+        margin: 0 15px;
+    }
+    @include xs{
+        margin: 0;
+    }
+    @include ms{
+        margin: 0 7px;
+    }
+}
+.faq-img2{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+     @include xl{
+        left: -14%;
+    }
+    @include lg{
+        left: -18%;
+    }
+    @include ml{
+        left: -13%;
+        width: 534px;
+    }
+    @include md{
+        left: -23%;
+    }
+    @include smd{
+        position: static;
+        transform: unset;
+        width: 100%;
+        margin-bottom: 70px;
+    }
+}
+
+// faq-sec3
+.faq-sec3{
+    position: relative;
+    background-color: var(--color-surface-dark-2);
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 25px;
+    .faq-content{
+        position: relative;
+        padding: 130px 131px 0 125px;
+        @include xl{
+            padding: 130px 60px 0 44px;
+        }
+        @include ml{
+            padding: 48px 35px 31px 14px;
+        }
+        .accordion-item {
+            border-color: var(--color-content-white);
+        }
+        .accordion-button,
+        .accordion-body{
+            color: var(--color-content-white);
+            &::after{
+                filter: brightness(10);
+            }
+        }
+    }
+    .ibt-btn-outline{
+        color: var(--color-content-white);
+    }
+    .sec-title{
+        max-width: 700px;
+    }
+}
+.faq-tabs{
+    display: flex;
+    @include smd{
+        display: block;
+    }
+}
+.faq-img3{
+    position: relative;
+    min-width: 644px;
+    @include lg{
+        min-width: 607px;
+    }
+    @include ml{
+        min-width: 496px;
+    }
+    @include md{
+        min-width: 374px;
+    }
+    @include sm{
+        min-width: 100%;
+    }
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 20px;
+    }
+}
+.feature-ai{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #D4D4D41A;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 604px;
+    padding: 75px 63px 71px;
+    border-radius: 15px;
+    @include lg{
+        width: 569px;
+        padding: 75px 47px 71px;
+    }
+    @include ml{
+        width: 457px;
+        padding: 49px 40px 44px
+    }
+    @include md{
+        width: 335px;
+        padding: 45px 41px 43px;
+    }
+    @include vxs{
+        width: 353px;
+    }
+    @include ms{
+        width: 250px;
+        padding: 32px 41px 29px;
+    }
+    .title{
+        font-size: 74px;
+        line-height: 80px;
+        margin-bottom: 0;
+        color: var(--color-content-white);
+        letter-spacing: -0.05em;
+        @include ml{
+            font-size: 56px;
+            line-height: 60px;
+        }
+        @include md{
+            font-size: 39px;
+            line-height: 41px;
+        }
+        @include ms{
+            font-size: 24px;
+            line-height: 33px;
+        }
+    }
+}
+
+// faq-sec4
+.faq-sec4{
+    position: relative;
+}
+.faq-content4{
+    position: relative;
+    .sec-title{
+        max-width: 524px;
+        @include ml{
+            max-width: 550px;
+        }
+    }
+    .accordion-item{
+        border-bottom: 1px solid var(--color-content-black2);
+        padding-bottom: 35px;
+        margin-bottom: 32px;
+    }
+    .accordion-button:focus{
+        box-shadow: none;
+    }
+    .accordion-button{
+        background-color: unset;
+        padding: 0;
+        border: 0;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 400;
+        color: var(--color-heading);
+        text-align: left;
+        letter-spacing: -0.03em;
+        font-family: var(--font-primary);
+        justify-content: space-between;
+        padding-left: 121px;
+        @include md{
+            padding-left: 58px;
+        }
+        @include sm{
+            font-size: 26px;
+            line-height: 36px;
+        }
+        @include xs{
+            font-size: 23px;
+            line-height: 32px;
+        }
+        &::after{
+            display: none;
+        }
+        .accordion-number{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 25px;
+            font-weight: 600;
+            color: var(--color-content-black2);
+            @include vxs{
+                font-size: 20px;
+            }
+        }
+        i{
+            font-size: 18px;
+            transition: all 300ms ease;
+        }
+    }
+    .accordion-body{
+        border: 0;
+        padding: 0;
+        box-shadow: unset;
+        font-weight: 500;
+        line-height: 30px;
+        font-size: 16px;
+        color: var(--color-content-black2);
+        margin-top: 11px;
+        padding-left: 122px;
+        max-width: 752px;
+        @include md{
+            padding-left: 51px;
+        }
+    }
+    .accordion-collapse{
+        border: 0;
+    }
+    .accordion-button:not(.collapsed){
+        color: inherit;
+        outline: none;
+        i{
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+// faq-sec5
+.faq-sec5{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 4%;
+        right: 0;
+        width: 578px;
+        height: 956px;
+        background-image: url(../images/layers/ser-layer2.png);
+        z-index: -1;
+        @include xl{
+            display: none;
+        }
+    }
+    @include lg{
+        margin: 0 15px;
+    }
+    @include xs{
+        margin: 0;
+    }
+    @include ms{
+        margin: 0 7px;
+    }
+}
+.faq-content5{
+    position: relative;
+    padding-left: 15px;
+    @include sm{
+        padding-left: 0;
+    }
+    .title{
+        font-weight: 400;
+        line-height: 70px;
+        font-size: 60px;
+        margin-bottom: 50px;
+        color: var(--color-heading);
+        letter-spacing: -0.05em;
+        @include md{
+            line-height: 50px;
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+        @include vxs{
+            line-height: 43px;
+            font-size: 33px;
+        }
+        @include ms{
+            line-height: 39px;
+            font-size: 29px;
+        }
+    }
+    .faq-content4{
+        .sec-title{
+            max-width: 570px;
+            @include md{
+                max-width: 396px;
+            }
+        }
+        .accordion-button{
+            font-size: 30px;
+            line-height: 35px;
+            @include md{
+                font-size: 25px;
+            }
+            @include vxs{
+                font-size: 23px;
+                padding-left: 35px;
+            }
+        }
+    }
+}
+.faq-block5{
+    position: relative;
+    margin-bottom: 54px;
+    .title2{
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 16px;
+        font-weight: 400;
+        color: var(--color-heading);
+        letter-spacing: -0.03em;
+        @include md{
+            font-size: 26px;
+            line-height: 30px;
+        }
+        @include vxs{
+            font-size: 24px;
+        }
+        @include ms{
+            font-size: 21px;
+        }
+        span{
+            margin-right: 12px;
+        }
+    }
+    p{
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 0;
+        color: var(--color-content-black2);
+    }
+}
+.faq-list5{
+    position: relative;
+    li{
+        position: relative;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: var(--color-content-black2);
+        display: flex;
+        align-items: center;
+        i{
+            font-size: 4px;
+            margin-right: 11px;
+        }
+    }
+}

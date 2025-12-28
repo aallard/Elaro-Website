@@ -1,0 +1,21 @@
+/*=====================
+    All Extend Here
+=======================*/
+/*----------------------
+    Bg Image  
+------------------------*/
+%bgImagePosition {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+%liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+%transition {
+    transition: var(--transition);
+}

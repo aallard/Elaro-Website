@@ -1,0 +1,802 @@
+@use "../global" as *;
+
+// page-banner
+.page-banner {
+    position: relative;
+    background-image: url(../images/bg/page1-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 174px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1118px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+}
+.page-content {
+    position: relative;
+    text-align: center;
+    max-width: 877px;
+    margin: 0 auto;
+    @include ms {
+        padding: 0 20px;
+    }
+    .title {
+        font-size: 80px;
+        line-height: 90px;
+        font-weight: 400;
+        color: var(--color-content-white);
+        letter-spacing: -0.03em;
+        margin-bottom: 0;
+        @include lg {
+            font-size: 62px;
+            line-height: 64px;
+        }
+        @include smd {
+            font-size: 49px;
+            line-height: 50px;
+        }
+        @include xs {
+            font-size: 39px;
+            line-height: 45px;
+        }
+        @include vxs {
+            font-size: 34px;
+            line-height: 44px;
+        }
+        @include ms {
+            font-size: 31px;
+            line-height: 41px;
+        }
+    }
+}
+.shape {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 117px;
+        height: 85px;
+        background-image: url(../images/layers/shape1-4.png);
+        z-index: 99;
+        border-radius: 20px 0 0 0;
+    }
+    @include sm {
+        display: none;
+    }
+}
+.shape3 {
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 120px;
+        height: 292px;
+        background-image: url(../images/layers/shape1-6.png);
+        z-index: 99;
+    }
+    @include sm {
+        display: none;
+    }
+}
+.staff-text {
+    position: absolute;
+    right: 142px;
+    bottom: 29px;
+    font-family: "Manrope Alt", Arial, Helvetica, sans-serif;
+    text-transform: none;
+    letter-spacing: -0.03em;
+    word-spacing: 0px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 0.75em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--color-content-white);
+    white-space: nowrap;
+    transform-origin: right bottom;
+    transform: rotate(-90deg) translateX(100%);
+    @include ml {
+        font-size: 65px;
+    }
+    @include sm {
+        display: none;
+    }
+}
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-content-white);
+    padding: 35px 82px 26px;
+    border-radius: 0 25px 0 25px;
+    @include sm {
+        padding: 27px 55px 21px;
+    }
+    @include vxs {
+        padding: 20px 53px 12px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/layers/shape2-3.png);
+        z-index: 99;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/layers/shape2-2.png);
+        z-index: 99;
+    }
+    li {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 30px;
+        margin: 0;
+        color: var(--color-content-black2);
+        &:nth-child(4) {
+            color: #c5c5c5;
+            margin: 0 3px;
+        }
+        &:nth-child(2) {
+            margin: 0 3px;
+        }
+        &:last-child {
+            @include ms {
+                max-width: 180px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        a {
+            color: var(--color-content-black2);
+            border-bottom: 1px solid var(--color-content-black2);
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+    .items {
+        color: #c5c5c5;
+        margin: 0 3px;
+    }
+}
+
+// page-banner2
+.page-banner2 {
+    position: relative;
+    background-image: url(../images/bg/page1-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1118px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+    .breadcrumbs {
+        li {
+            white-space: nowrap;
+            &:last-child {
+                @include ms {
+                    max-width: 50px;
+                }
+            }
+        }
+    }
+}
+
+// page-banner3
+.page-banner3 {
+    position: relative;
+    background-image: url(../images/bg/page1-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1023px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+}
+
+// page-banner4
+.page-banner4 {
+    position: relative;
+    background-image: url(../images/bg/page1-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1023px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+    .breadcrumbs {
+        li {
+            &:last-child {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include vxs {
+                    max-width: 90px;
+                }
+            }
+        }
+    }
+}
+
+// page-banner5
+.page-banner5 {
+    position: relative;
+    background-image: url(../images/bg/page1-5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1154px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+}
+
+// page-banner6
+.page-banner6 {
+    position: relative;
+    background-image: url(../images/bg/page1-6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1118px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+}
+
+// page-banner7
+.page-banner7 {
+    position: relative;
+    background-image: url(../images/bg/page1-7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1023px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+}
+
+// page-banner8
+.page-banner8 {
+    position: relative;
+    background-image: url(../images/bg/page1-8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1023px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+}
+
+// page-banner9
+.page-banner9 {
+    position: relative;
+    background-image: url(../images/bg/page1-9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1115px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+}
+
+// page-banner10
+.page-banner10 {
+    position: relative;
+    background-image: url(../images/bg/page1-10.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 146px 0 125px;
+    margin: 15px;
+    border-radius: 28px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    @include sm {
+        padding: 122px 0 141px;
+    }
+    @include xs {
+        padding: 86px 0 127px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    @include ms {
+        padding: 81px 0 95px;
+    }
+    .shape {
+        @include sm {
+            display: inline-block;
+        }
+    }
+}
+.page-content10 {
+    text-align: center;
+    img {
+        margin-bottom: 73px;
+        @include xs {
+            margin-bottom: 30px;
+        }
+        @include ms {
+            width: 120px;
+        }
+    }
+    .title {
+        font-size: 200px;
+        line-height: 200px;
+        font-weight: 700;
+        margin-bottom: 9px;
+        color: transparent;
+        font-family: var(--font-secondary);
+        letter-spacing: -0.03em;
+        -webkit-text-stroke: 1px #ffffff;
+        text-stroke: 1px #ffffff;
+        @include xs {
+            font-size: 137px;
+            line-height: 126px;
+            margin-bottom: 23px;
+        }
+        @include vxs {
+            font-size: 110px;
+            line-height: 106px;
+        }
+        @include ms {
+            font-size: 88px;
+            line-height: 78px;
+        }
+    }
+    .title2 {
+        font-size: 80px;
+        line-height: 90px;
+        margin-bottom: 20px;
+        color: var(--color-content-white);
+        font-weight: 400;
+        @include md {
+            font-size: 65px;
+            line-height: 68px;
+        }
+        @include smd {
+            font-size: 50px;
+            line-height: 55px;
+        }
+        @include xs {
+            font-size: 40px;
+            line-height: 44px;
+        }
+        @include vxs {
+            font-size: 33px;
+            line-height: 32px;
+        }
+        @include ms {
+            font-size: 29px;
+            line-height: 39px;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 500;
+        color: var(--color-content-white);
+        max-width: 585px;
+        margin: 0 auto 33px;
+    }
+    .ibt-btn {
+        color: var(--color-content-white);
+        border: 1px solid var(--color-content-white);
+        margin-bottom: 104px;
+        &::before {
+            display: none;
+        }
+        &:hover {
+            border-color: transparent;
+        }
+        @include smd {
+            margin-bottom: 50px;
+        }
+        @include vxs {
+            margin-bottom: 25px;
+        }
+    }
+    .social-icon {
+        justify-content: center;
+    }
+}
+.shape2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-content-white);
+    border-radius: 0 25px 0 25px;
+    width: 295px;
+    height: 88px;
+    @include xs {
+        width: 197px;
+        height: 59px;
+    }
+    @include ms {
+        width: 133px;
+        height: 53px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/layers/shape2-3.png);
+        z-index: 99;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/layers/shape2-2.png);
+        z-index: 99;
+    }
+}
+.shape4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-content-white);
+    border-radius: 25px 0 25px 0;
+    width: 90px;
+    height: 14.21vw;
+    @include vxs {
+        width: 74px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/layers/shape2-3.png);
+        z-index: 99;
+        transform: rotate(-90deg);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/layers/shape2-2.png);
+        z-index: 99;
+        transform: rotate(-90deg);
+    }
+}
+
+// page-banner11
+.page-banner11 {
+    position: relative;
+    background-image: url(../images/bg/page1-11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 217px 0 235px;
+    margin: 21px 20px 0;
+    border-radius: 28px;
+    @include sm {
+        padding: 125px 0 178px;
+    }
+    @include xs {
+        padding: 123px 0 196px;
+    }
+    @include vxs {
+        padding: 114px 0 160px;
+    }
+    @include vxs {
+        padding: 81px 0 132px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 100%;
+        height: 1078px;
+        background-image: url(../images/layers/bg-layer2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            height: 400px;
+        }
+        @include vxs {
+            background-size: contain;
+            top: -28%;
+        }
+    }
+}

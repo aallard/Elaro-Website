@@ -1,0 +1,677 @@
+@use "../global" as *;
+
+.neural-playground {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -17%;
+        left: 0;
+        width: 432px;
+        height: 1176px;
+        background-image: url(../images/layers/eclips3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include xs {
+            top: -20%;
+        }
+        @include ms {
+            width: 100%;
+        }
+    }
+}
+.neural-playground.v2 {
+    &::before {
+        display: none;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -65%;
+        left: -25%;
+        width: 100%;
+        height: 1250px;
+        background-image: url(../images/layers/neural-v2.png);
+        background-repeat: no-repeat;
+    }
+}
+.neural-content {
+    position: relative;
+    padding-left: 57px;
+    @include xl {
+        padding-left: 0;
+    }
+    @include smd {
+        padding-left: 55px;
+    }
+    @include xs {
+        padding-left: 0;
+    }
+    .gradient-title {
+        line-height: 110px;
+        margin-bottom: 60px;
+        @include ml {
+            line-height: 1.1em;
+        }
+        @include smd {
+            font-size: 57px;
+        }
+        @include ms {
+            font-size: 34px;
+            line-height: 1.3em;
+        }
+    }
+}
+.neural-img {
+    position: absolute;
+    top: 55%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: -68px;
+    @include xl {
+        left: -16%;
+    }
+    @include lg {
+        width: 387px;
+    }
+    @include ml {
+        left: -11%;
+        width: 309px;
+    }
+    @include md {
+        width: 267px;
+    }
+    @include smd {
+        width: 222px;
+    }
+    @include xs {
+        position: static;
+        transform: unset;
+        width: 363px;
+        margin-bottom: 50px;
+    }
+    @include vxs {
+        width: 303px;
+    }
+}
+
+// neural-playground3
+.neural-playground3 {
+    position: relative;
+    .gradient-title {
+        @include lg {
+            font-size: 89px;
+            line-height: 93px;
+        }
+        @include ml {
+            font-size: 80px;
+            line-height: 80px;
+        }
+        @include md {
+            font-size: 66px;
+            line-height: 70px;
+        }
+        @include smd {
+            font-size: 57px;
+        }
+        @include sm {
+            font-size: 63px;
+        }
+        @include xs {
+            font-size: 49px;
+            line-height: 58px;
+        }
+        @include ms {
+            font-size: 40px;
+            line-height: 51px;
+        }
+        span {
+            background-color: transparent;
+            background-image: linear-gradient(113deg, #45d0bd 0%, #44b6e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    .neural-content {
+        padding: 0 50px 0 69px;
+        @include xl {
+            padding: 0 0 0 50px;
+        }
+        @include smd {
+            padding: 0 0 0 185px;
+        }
+        @include sm {
+            padding-left: 0;
+        }
+    }
+}
+.neural-img3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -38px;
+    @include xl {
+        left: -17%;
+    }
+    @include ml {
+        width: 435px;
+    }
+    @include md {
+        width: 349px;
+    }
+    @include smd {
+        width: 296px;
+    }
+    @include sm {
+        position: relative;
+        transform: unset;
+        top: 0;
+        left: -14px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 432px;
+        height: 1022px;
+        background-image: url(../images/layers/eclips9.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include md {
+            top: -66%;
+        }
+        @include sm {
+            top: -28%;
+            left: -15px;
+        }
+        @include ms {
+            top: -55%;
+            width: 100%;
+            background-size: contain;
+        }
+    }
+}
+.neural-img3.v2 {
+    &::after {
+        display: none;
+    }
+}
+.neural-playground3.v2 {
+    .neural-content {
+        max-width: 1260px;
+        @include xl {
+            padding-left: 0;
+        }
+        @include smd {
+            padding: 0 0 0 185px;
+        }
+        @include sm {
+            padding-left: 0;
+        }
+    }
+}
+
+// neural-playground4
+.neural-playground4 {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 432px;
+        height: 1157px;
+        background-image: url(../images/layers/eclips3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include xs {
+            top: -20%;
+        }
+        @include ms {
+            width: 100%;
+            background-size: contain;
+        }
+    }
+}
+.neural-content4 {
+    position: relative;
+    padding-left: 57px;
+    @include xl {
+        padding-left: 0;
+    }
+    .gradient-title {
+        line-height: 110px;
+        margin-bottom: 60px;
+        @include ml {
+            line-height: 1.1em;
+        }
+        @include smd {
+            font-size: 57px;
+        }
+        @include ms {
+            font-size: 34px;
+            line-height: 1.3em;
+        }
+    }
+}
+.neural-img4 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    @include xl {
+        left: -16%;
+    }
+    @include lg {
+        width: 387px;
+    }
+    @include ml {
+        left: -11%;
+        width: 309px;
+    }
+    @include md {
+        width: 267px;
+    }
+    @include smd {
+        width: 222px;
+    }
+    @include sm {
+        width: 209px;
+    }
+    @include xs {
+        position: static;
+        transform: unset;
+        width: 363px;
+        margin-bottom: 50px;
+    }
+    @include vxs {
+        width: 303px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 432px;
+        height: 1022px;
+        background-image: url(../images/layers/eclips9.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include ml {
+            top: -77%;
+        }
+        @include md {
+            top: -66%;
+        }
+        @include smd {
+            top: -109%;
+        }
+        @include sm {
+            top: -28%;
+            left: -15px;
+        }
+        @include ms {
+            display: none;
+        }
+    }
+}
+
+// neural-playground5
+.neural-playground5 {
+    position: relative;
+    padding: 50px 0;
+    @include ml {
+        padding: 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 683px;
+        height: 1440px;
+        background-image: url(../images/layers/eclipe7-1.png);
+        background-repeat: no-repeat;
+        z-index: -11;
+        @include xs {
+            background-size: contain;
+            width: 100%;
+        }
+    }
+    .neural-content {
+        padding-right: 50px;
+        padding-left: 0;
+        .gradient-title {
+            @include md {
+                font-size: 66px;
+            }
+            @include xs {
+                font-size: 50px;
+            }
+            @include vxs {
+                font-size: 41px;
+                line-height: 50px;
+            }
+            span {
+                background-image: linear-gradient(113deg, #45d0bd 0%, #44b6e9 100%);
+            }
+        }
+    }
+    .swiper.brand {
+        max-width: 977px;
+        margin-left: unset;
+    }
+}
+.neural-img5 {
+    @include smd {
+        margin-left: -15px;
+    }
+    .one {
+        position: absolute;
+        top: 55px;
+        left: 0;
+        z-index: 99;
+        @include xl {
+            width: 351px;
+            top: 12%;
+        }
+        @include ml {
+            width: 328px;
+            top: 9%;
+        }
+        @include md {
+            width: 279px;
+        }
+        @include smd {
+            position: static;
+            width: unset;
+        }
+    }
+    .two {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include xl {
+            bottom: 29%;
+            left: 0;
+            width: 437px;
+        }
+        @include ml {
+            bottom: 7%;
+            width: 397px;
+        }
+        @include md {
+            bottom: 21%;
+            width: 325px;
+        }
+        @include smd {
+            display: none;
+        }
+    }
+}
+
+// neural-playground6
+.neural-playground6 {
+    position: relative;
+    margin: 50px 0;
+    @include ml {
+        margin: 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 683px;
+        height: 1440px;
+        background-image: url(../images/layers/eclipe7-1.png);
+        z-index: -11;
+        @include xs {
+            display: none;
+        }
+    }
+    .neural-content {
+        padding-right: 50px;
+        padding-left: 0;
+        .gradient-title {
+            @include md {
+                font-size: 66px;
+            }
+            @include xs {
+                font-size: 50px;
+            }
+            @include vxs {
+                font-size: 41px;
+                line-height: 50px;
+            }
+            span {
+                background-image: linear-gradient(113deg, #45d0bd 0%, #44b6e9 100%);
+            }
+        }
+    }
+    .swiper.brand {
+        max-width: 977px;
+        margin-left: unset;
+    }
+}
+.neural-img6 {
+    @include smd {
+        margin-left: -15px;
+    }
+    .one {
+        position: absolute;
+        top: 55px;
+        left: 0;
+        z-index: 99;
+        @include xl {
+            width: 566px;
+            top: 12%;
+        }
+        @include ml {
+            width: 488px;
+        }
+        @include md {
+            width: 438px;
+            top: 8%;
+        }
+        @include smd {
+            position: static;
+            width: unset;
+        }
+    }
+    .two {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include xl {
+            bottom: 27%;
+            left: 0;
+            width: 468px;
+        }
+        @include lg {
+            width: 433px;
+        }
+        @include ml {
+            width: 386px;
+            bottom: 21%;
+        }
+        @include md {
+            width: 346px;
+        }
+        @include sm {
+            display: none;
+        }
+    }
+}
+
+// neural-playground7
+.neural-playground7 {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        left: 0;
+        width: 432px;
+        height: 1199px;
+        background-image: url(../images/layers/eclips3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include xs {
+            top: -20%;
+        }
+        @include ms {
+            width: 100%;
+        }
+    }
+    .gradient-title {
+        @include lg {
+            font-size: 89px;
+            line-height: 93px;
+        }
+        @include ml {
+            font-size: 80px;
+            line-height: 80px;
+        }
+        @include md {
+            font-size: 66px;
+            line-height: 70px;
+        }
+        @include smd {
+            font-size: 57px;
+        }
+        @include xs {
+            font-size: 49px;
+            line-height: 58px;
+        }
+        @include ms {
+            font-size: 34px;
+            line-height: 1.3em;
+        }
+        span {
+            background-color: transparent;
+            background-image: linear-gradient(113deg, #45d0bd 0%, #44b6e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    .neural-content {
+        padding: 0 50px 0 69px;
+        @include xl {
+            padding: 0 0 0 50px;
+        }
+        @include smd {
+            padding-left: 0;
+        }
+    }
+}
+.neural-img7 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -38px;
+    @include xl {
+        left: -17%;
+    }
+    @include ml {
+        width: 435px;
+    }
+    @include md {
+        width: 349px;
+    }
+    @include sm {
+        position: relative;
+        transform: unset;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: -29%;
+        left: 0;
+        width: 432px;
+        height: 1022px;
+        background-image: url(../images/layers/eclips9.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        @include md {
+            top: -66%;
+        }
+        @include sm {
+            top: -28%;
+            left: -15px;
+        }
+        @include ms {
+            display: none;
+        }
+    }
+}
+
+// .neural-playground8
+.neural-playground8 {
+    position: relative;
+    padding: 120px 0 245px;
+    @include md {
+        padding: 120px 0 100px;
+    }
+    @include sm {
+        padding: 80px 0 80px;
+    }
+}
+.neural-content8 {
+    position: relative;
+    padding-left: 57px;
+    @include xl {
+        padding-left: 0;
+    }
+    .gradient-title {
+        color: var(--color-content-white);
+    }
+}
+.neural-img8 {
+    position: absolute;
+    top: 17%;
+    left: 0;
+    @include xl {
+        left: -16%;
+    }
+    @include lg {
+        width: 387px;
+    }
+    @include ml {
+        left: -11%;
+        width: 309px;
+    }
+    @include md {
+        width: 267px;
+    }
+    @include sm {
+        width: 209px;
+    }
+    @include xs {
+        position: static;
+        transform: unset;
+        width: 363px;
+        margin-bottom: 50px;
+    }
+    @include vxs {
+        width: 303px;
+    }
+}

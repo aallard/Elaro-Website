@@ -1,0 +1,432 @@
+@use "../global" as *;
+
+.page-title-container {
+  position: relative;
+  margin: 21px auto 0;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px 0;
+  font-size: 30px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  z-index: 3;
+
+  .page-title-row {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1420px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .page-title-box {
+    position: relative;
+  }
+
+  .page-title {
+    word-wrap: break-word;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.125em;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin-top: 0;
+    color: var(--color-content-white);
+
+    &:before,
+    &:after {
+      content: '/ ';
+      white-space: pre;
+    }
+
+    &:after {
+      content: ' /';
+    }
+  }
+
+  .page-title-box-icon {
+    margin: 0 auto 22px;
+  }
+
+  .page-title-decoration-tl,
+  .page-title-decoration-br,
+  .page-title-decoration-bl {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @media #{$sm-layout} {
+      display: none;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      height: 40px;
+      width: 20px;
+    }
+  }
+
+  .page-title-decoration-tl {
+    left: -1px;
+    top: -1px;
+    padding: 0 20px 20px 0;
+
+    &:before {
+      left: 0;
+      bottom: -20px;
+      border-top-left-radius: 20px;
+      box-shadow: 0 -20px 0 0 #ffffff;
+    }
+
+    &:after {
+      right: 0;
+      top: 0;
+      border-top-left-radius: 20px;
+      box-shadow: 0 -20px 0 0 #ffffff;
+    }
+
+    .page-title-decoration-tl-inner {
+      width: 78px;
+      height: 50px;
+      border-radius: 23px 0 25px 0;
+    }
+  }
+
+  .page-title-decoration-br {
+    right: -1px;
+    bottom: -1px;
+    padding: 20px 0 0 20px;
+
+    &:before {
+      left: 0;
+      bottom: 0;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 20px 0 0 #ffffff;
+    }
+
+    &:after {
+      right: 0;
+      top: -20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 20px 0 0 #ffffff;
+    }
+
+    .page-title-decoration-br-inner {
+      width: 70px;
+      height: 100px;
+      border-radius: 25px 0 23px 0;
+    }
+  }
+
+  .page-title-decoration-bl {
+    left: -1px;
+    bottom: -1px;
+    padding: 20px 20px 0 0;
+
+    &:before {
+      left: 0;
+      top: -20px;
+      border-bottom-left-radius: 20px;
+      box-shadow: 0 20px 0 0 #ffffff;
+    }
+
+    &:after {
+      right: 0;
+      bottom: 0;
+      border-bottom-left-radius: 20px;
+      box-shadow: 0 20px 0 0 #ffffff;
+    }
+
+    .page-title-decoration-bl-inner {
+      width: 198px;
+      height: 58px;
+      border-radius: 0 25px 0 23px;
+    }
+  }
+
+  &.has-decoration {
+    .page-title-additional {
+      right: 120px;
+    }
+
+    &.has-additional-text {
+      .page-title-row {
+        padding: 0 180px;
+      }
+    }
+  }
+
+  &.has-additional-text {
+    .page-title-row {
+      padding: 0 90px;
+    }
+  }
+}
+
+.top-page-wrapper {
+  &.header-position-over {
+    .page-title-container {
+      margin-top: 0;
+    }
+
+    .no-header+.page-title-container {
+      margin-top: 21px;
+    }
+  }
+}
+
+.page-title-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+  background: var(--color-surface-black);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.page-title-additional {
+  position: absolute;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.75em;
+  bottom: 20px;
+  right: 30px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px currentColor;
+  white-space: nowrap;
+  display: none;
+  transform-origin: right bottom;
+  transform: rotate(-90deg) translateX(100%);
+}
+
+.breadcrumbs-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 100%;
+  padding: 20px 20px 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 0;
+    height: 40px;
+    width: 20px;
+    box-shadow: 0 20px 0 0 #ffffff;
+  }
+
+  &:before {
+    left: 0;
+    top: -20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  &:after {
+    right: 0;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+// .breadcrumbs {
+//   --link-gradient-angle: 262deg;
+//   --link-gradient-colorstop-1: 14.51%;
+//   --link-gradient-colorstop-2: 95.96%;
+//   font-size: 14px;
+//   line-height: 27px;
+//   font-weight: 600;
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   padding: 15px 30px 16px 38px;
+//   border-radius: 0 25px 0 23px;
+//   background-color: var(--color-surface-white);
+//   display: flex;
+//   align-items: center;
+//   a {
+//     display: inline-block;
+//     position: relative;
+
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       left: 0;
+//       bottom: -1px;
+//       width: 100%;
+//       height: 1px;
+//     }
+//   }
+
+//   .delimiter {
+//     display: inline-block;
+//     margin: 0 3px;
+
+//     &:before {
+//       content: '/';
+//     }
+//   }
+// }
+
+// Decoration Inner Backgrounds
+.page-title-container {
+
+  .page-title-decoration-bl .page-title-decoration-bl-inner,
+  .page-title-decoration-tl .page-title-decoration-tl-inner,
+  .page-title-decoration-br .page-title-decoration-br-inner {
+    background-color: var(--color-surface-white);
+  }
+}
+
+.page-title-wrapper,
+.body-container .page-title-wrapper a,
+.page-title-container .page-title-additional {
+  color: var(--color-content-white);
+}
+
+// Media Queries
+@media only screen and (min-width: 576px) {
+  .page-title-container {
+    font-size: 45px;
+
+    .page-title {
+      font-size: 45px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-title-container {
+    min-height: 400px;
+    font-size: 50px;
+
+    .page-title-row {
+      padding: 0 30px;
+    }
+
+    .page-title {
+      font-size: 1em;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-title-container {
+    min-height: 540px;
+    font-size: 60px;
+
+    &.has-decoration {
+      &.has-additional-text {
+        .page-title-row {
+          padding: 0 180px;
+        }
+      }
+
+      .page-title-row {
+        padding: 0 110px;
+      }
+    }
+
+    &.has-additional-text {
+      .page-title-row {
+        padding: 0 90px;
+      }
+    }
+
+    .page-title-decoration-bl,
+    .page-title-decoration-tl,
+    .page-title-decoration-br {
+      display: block;
+    }
+
+    .page-title-decoration-bl .page-title-decoration-bl-inner {
+      width: 295px;
+      height: 88px;
+    }
+
+    .page-title-decoration-tl .page-title-decoration-tl-inner {
+      width: 102px;
+      height: 65px;
+    }
+
+    .page-title-decoration-br .page-title-decoration-br-inner {
+      width: 90px;
+      height: 14.21vw;
+    }
+
+    .page-title-row {
+      padding: 0 40px;
+    }
+
+    .page-title-additional {
+      display: block;
+    }
+
+    .breadcrumbs {
+      padding: 35px 82px 26px 82px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .page-title-container {
+    font-size: 80px;
+
+    &.has-additional-text {
+      .page-title-row {
+        padding: 0 130px;
+      }
+
+      &.has-decoration {
+        .page-title-row {
+          padding: 0 220px;
+        }
+      }
+    }
+
+    .page-title-additional {
+      font-size: 1.25em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1830px) {
+  .page-title-container {
+    &.has-additional-text {
+      .page-title-row {
+        padding: 0 40px;
+      }
+
+      &.has-decoration {
+        .page-title-row {
+          padding: 0 40px;
+        }
+      }
+    }
+  }
+}
